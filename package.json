@@ -1,0 +1,29 @@
+{
+  "name": "is-date",
+  "description": "minimal utility to check if provided string is a date.",
+  "version": "0.0.0",
+  "dependencies": {},
+  "scripts": {
+    "lint": "jshint .",
+    "checkStyle": "jscs .",
+    "pretest": "npm run-script lint && npm run-script checkStyle",
+    "test": "istanbul cover ./node_modules/.bin/_mocha test",
+    "posttest": "istanbul check-coverage && rm -rf coverage",
+    "prepublish": "npm test && npm prune"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "author": "Umayr Shahid <umayrr@hotmail.co.uk>",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^1.21.4",
+    "istanbul": "^0.3.2",
+    "jshint": "^2.5.6",
+    "jscs": "^1.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:umayr/is-date.git"
+  }
+}
